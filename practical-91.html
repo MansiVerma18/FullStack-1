@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical-9</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .header{
+            background-color: black;
+            line-height: 70px;
+            width: 100%;
+            height: 70px;
+            font-size:30px ;     
+            position: fixed;     
+            border-radius:60px;
+            top:0  
+        }
+        
+        .header .menu1{
+            justify-content: center;
+            display: flex;
+            list-style: none;
+        }
+        .header .menu1 li{
+            float: left;      
+            color: wheat;
+            list-style: none;
+            
+        }
+
+        .menu1 a{
+            text-decoration:none;
+            color: wheat;
+            padding:10px 20px;
+        }
+        a:hover{
+            color:  black;
+            transition: 0.5s;
+            background-color: wheat;
+            border-radius:30px;
+        }
+        .show-btn,.hide-btn{
+            color: white;
+            display: none;
+            
+        }
+        
+        .show-btn{
+            float: right;
+            padding: 0 20px;
+        }
+        .show-btn:hover,.hide-btn:hover{
+            color: wheat;
+            transition: 0.5s;
+            
+        }
+        
+        #chk{
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+        .banner{
+            background-image: url(nikolay-tarashchenko-u76CN5rZeOU-unsplash.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin-top:80px;
+            width: 100%;
+            display: flex;
+        }
+        
+        .banner h1{
+            color: wheat;
+            font-size:40px;
+            padding: 10px 20px;
+        }
+        .section-1{
+            width: 100%;
+            height: 80vh;
+        }
+        .section-1 h1{
+            text-align: center;
+            font-size:40px;
+            margin:7vh;
+        }
+        .circle1{
+            margin-bottom: 13%;
+            float: left;    
+            width: 23%;
+            height: 0;
+            padding-bottom: 22%;            
+            border-radius:50%;
+            background-size: cover;
+            background-repeat: no-repeat;            
+            margin-left:1.5%;
+        }
+        .section2{
+            width: 100%;
+            height: 90vh;
+            clear: left;
+            margin-bottom:30vh;
+        }
+        .section2 h1{
+            text-align: center;
+            font-size:40px;
+            margin:7vh;
+        }
+        .left{width: 50%;
+            margin-left:1vh;
+            height: 99vh;}
+        .right{width: 50%;
+            height: 99vh;}
+        
+        .maincontent{
+            color: wheat;
+            font-size: 20px;
+            overflow: hidden;
+            background-color: gray;
+            height: 99vh;
+            width: 49%;            
+            margin-right:1.5vh;
+            text-align: justify;
+            padding: 10px;
+            float: left;
+        }      
+        .maincontent h2{
+            padding-bottom:10px ;
+        }
+           
+        .Article1{
+            width: 49%;            
+            font-size: 180%;            
+            display: flex;
+            margin-bottom:1.5vh ;
+            height: 32vh;
+            color: black; 
+            justify-content: center;
+            
+        } 
+        .section-3
+        {
+            clear: both;
+        } 
+        .section-3 h1{
+            text-align: center;
+            font-size:200%;
+            margin-bottom:6vh;
+            
+        }
+        .box a
+        {
+        display: block;
+        margin:10px;
+        padding: 10px;
+        font-size:20px;
+        border-radius: 8px;
+        text-align: center;
+        color: burlywood;
+        background-color: brown;
+        text-decoration: none;}
+
+        .box a:hover{
+            background-color:burlywood ;
+            color: brown;
+        }
+        .box h4{
+            margin:10px;
+            text-align: center;
+        }
+        .box{
+            width: 22%;
+            float: left;
+            margin-left:2.4vw;
+            background-color: blanchedalmond;
+            padding: 15px;
+            border-radius: 8px;
+            height:60%;
+            box-shadow: 0 5px 5px rgba(0,0,0);
+            margin-bottom:6vh;
+        }
+
+        .box img{
+            width: 100%;
+            height: 167px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: 0.3s;        
+        }
+          
+        .section-4 h1{
+            clear: both;
+            text-align: center;
+            font-size:40px;
+            margin-bottom: 3vh;
+        } 
+        footer{
+            height: 70px;
+            width:100%;
+            background-color:  black;
+            color: wheat;
+            margin-bottom:0%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        
+        @media (min-width:801px) and (max-width:1200px)
+        {
+            *{
+                transition: .7s;
+            }
+            h1{
+                font-size: 40px;
+            }
+            .section-1{
+                width: 100%;
+            }
+            .circle1{
+            margin-bottom: 13%;
+            float: left;    
+            width:30%;
+            height: 0;
+            padding-bottom: 30%;            
+            border-radius:50%;
+            background-size: cover;
+            background-repeat: no-repeat;            
+            margin-left:13%;
+            }
+            .section-3 .box{
+                width:40%;
+                height:70%;
+                margin-left:7%;
+            }
+            
+            .banner{
+                    
+                    font-size: 30px;
+            }   
+
+        }
+        @media(max-width:800px)
+        {
+            h1{
+                font-size: 20px;
+            }
+            *{
+                transition: .7s;
+            }
+            .header{
+                width: 100%;
+                position: fixed;
+                background-color:  black;
+                top:0;
+                height: 70px;
+                margin-bottom:15px ;
+                
+            }    
+            
+            .show-btn{
+                display: block;
+            }
+            .menu1{
+                position: fixed;
+                width: 100%;
+                right: -100%;
+                top:0;
+                line-height: normal;
+                background-color:  black;
+                color: wheat;
+                padding:100px 0px;
+                text-align: center;
+                height: 100vh;
+                
+            }
+            .menu1 li{
+                
+                height:90px;                
+                width: 100%;
+                clear: both;
+                
+            }
+            .menu1 a{
+                width:100vw;
+                
+                padding:30px 50px;
+                line-height: 70px;
+
+            }
+            a:hover{
+            color:  black;
+            transition: 0.5s;
+            width: 100%;
+            background-color: wheat;
+            border-radius:30px;
+        }
+            
+            #chk:checked~ .menu1{
+                right: 0;
+            }
+           
+            .hide-btn{
+                position: absolute;
+                display: block;
+                top:10px;
+                right:20px;
+            }     
+            .circle1{
+                clear: both;
+                margin-left: 30%;
+                margin-bottom: 10%;              
+            width:40%;
+            height: 0;
+            padding-bottom: 40%;            
+            border-radius:50%;
+            background-size: cover;
+            background-repeat: no-repeat;          
+            
+            }
+            .banner{
+                width: 100%;
+                font-size:20px ;
+                display: block;
+                height: 70vh;
+                
+            }
+            .section2{
+                width: 100%;
+                margin-bottom:400px;
+            }
+            .left{
+                width: 100%;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+            .right{
+                
+                width: 100%;
+                height: 400px;
+                margin-bottom: 80%;
+            }
+
+            .Article1 {
+                height: 31%;
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                font-size: 18px;
+                
+      }
+            .box{
+                width: 40%;
+                float: left;
+                margin-left: 50px;
+        
+                border-radius: 8px;
+                margin-bottom: 20px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+            .section-3{                
+                margin-top:40px
+            }
+            
+        }
+        @media(max-width:625px){
+            #container{
+                min-width: 320px;
+            }
+            *{
+                transition:.5s;
+            }
+            .section-1 h1,.section2 h1 ,.section-3 h1,.section-4 h1{
+                font-size: 20px;
+            }
+                     .header{
+                width: 100%;
+                position: fixed;
+                background-color:  black;
+                top:0;
+                height: 70px;
+                margin-bottom:15px ;
+                
+            }    
+            
+            .show-btn{
+                display: block;
+            }
+            .menu1{
+                position: fixed;
+                width: 100%;
+                right: -100%;
+                top:0;
+                line-height: normal;
+                background-color:  black;
+                color: wheat;
+                padding:80px 0px;
+                text-align: center;
+                height: 100vh;
+                
+            }
+            .menu1 li{
+                
+                height:90px;                
+                clear: both;
+                
+            }
+            .menu1 a{
+                width:100%;                
+                padding:30px 50px;
+                line-height: 70px;
+
+            }
+            a:hover{
+            color:  black;
+            transition: 0.5s;
+            
+            background-color: wheat;
+            border-radius:30px;
+        }
+            
+            #chk:checked~ .menu1{
+                right: 0;
+            }
+           
+            .hide-btn{
+                position: absolute;
+                display: block;
+                top:10px;
+                right:20px;
+            }  
+            .banner{
+                width: 100%;
+          height: 250px;
+          margin-bottom: 15px;
+          color: wheat;
+          margin-top: 90px;
+          font-size: 20px;
+            }
+            .section-4{
+                width: 100%
+                
+            }
+            .box{
+                margin-left: 20px;
+          width: 90%;
+          box-sizing: border-box;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+          max-height: 1000px;
+            }
+            .box>img {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 20px;
+        }
+        .Article1 {
+          box-sizing: border-box;
+          height: 31%;
+          margin-bottom: 20px;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          color: black;
+          overflow: hidden;
+        }
+        .circle1 img {
+                height: 70%;
+                width: 70%;
+                border-radius: 50%;
+                margin-bottom: 20px;
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <a name="header"></a>
+    <div class="header">        
+            <input type="checkbox" id="chk">
+                <label for="chk" class="show-btn">
+                    <i class="fa fa-bars"></i>
+                </label>
+                <div class="menu1">   
+            <ul>                
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#section-1">Team</a></li>
+                <li><a href="#Technologies">Technologies</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>                
+            </ul>
+            </div>
+    </div>
+    <div class="banner">
+        <h1>Practical-9</h1>
+    </div>
+    <a name="section-1"></a>
+    <div class="section-1" style="text-align: center;">
+        <h1>Team Members</h1>
+        <div style="background-image:url(1.png);"class="circle1"></div>
+        <div style="background-image:url(2.png);"class="circle1"></div>
+        <div style="background-image:url(3.png);"class="circle1"></div>
+        <div style="background-image:url(9.png);"class="circle1"></div>
+    </div>
+    
+    <div class="section2" >
+        
+        <h1>About Us</h1>
+        <a name="about"></a>
+            <div class="left maincontent">
+                <h2>About Project</h2>
+                <p>
+                "Lorem ipsum dolor sit amet, consectetaur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                
+                This continues at length and variously. The text is not really Greek, but badly garbled Latin. It started life as extracted phrases from sections 1.10.32 and 1.10.33 of Cicero's "De Finibus Bonorum et Malorum" ("The Extremes of Good and Evil"), which read:
+                
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores</div>                  
+            </p>
+            <div style="background-image:url(p1.jpg);"class="right Article1"><span>Project-1</span></div>
+            <div style="background-image:url(p2.jpeg);"class="right Article1"><span>Project-2</span></div>
+            <div style="background-image: url(p3.jpg);"class="right Article1"><span>Project-3</span></div>
+        
+    </div>
+    
+    <div class="section-3">
+        <a name="Technologies"></a>
+        <h1>Technologies</h1>
+        
+        <div class="box">
+            <img src="HTML.png">
+            <h4>Introduction to HTML</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lorem elit, rutrum a tempor ac, vestibulum nec ligula. Nam congue nulla nec dolor facilisis, quis ultricies metus ultrices.</p>
+            <a href="hypertext.html">Read more</a>
+        </div>
+        <div class="box">
+            <img src="css-illustration.png">
+            <h4>Introduction to CSS</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lorem elit, rutrum a tempor ac, vestibulum nec ligula. Nam congue nulla nec dolor facilisis, quis ultricies metus ultrices.</p>
+            <a href="cascade.html">Read more</a>
+        </div>
+        <div class="box">
+            <img src="images-1.png">
+            <h4>Introduction to JavaScript</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lorem elit, rutrum a tempor ac, vestibulum nec ligula. Nam congue nulla nec dolor facilisis, quis ultricies metus ultrices.</p>
+            <a href="javascript.html">Read more</a>
+        </div>
+        <div class="box">
+            <img src="images.png">
+            <h4>Introduction to Bootstrap</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris lorem elit, rutrum a tempor ac, vestibulum nec ligula. Nam congue nulla nec dolor facilisis, quis ultricies metus ultrices.</p>
+            <a href="bootstrap.html">Read more</a>
+        </div>
+    </div>
+    
+<div class="section-4">
+    <h1>Contact</h1>
+    <footer style="text-align: center;">
+        <a name="contact"></a>
+        <h2>Back to top</h2>
+    </footer>
+</div>
+</div>
+</body>
+</html>
