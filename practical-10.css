@@ -2,7 +2,8 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
-    transition:0.7s
+    transition:.7s
+    
 }
 .header{
     width: 100%;
@@ -26,9 +27,10 @@
     padding:20px 40px
 }
 .content{
-    
+    width: 100%;
     margin-top:70px;
     float: right;
+    transition:.5s;
     
 }
 .content img{
@@ -109,9 +111,10 @@ i{
 #chk:checked~.hide-btn{
     opacity: 1;
 }
-#chk:checked ~ .content{
-    display: none;
+#chk:checked ~ .content{   
+    width:80%;
 }
+
 
 @media(max-width:768px){
     .sidebar{
