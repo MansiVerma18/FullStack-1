@@ -69,9 +69,16 @@ h2{
 }
 .sec-4{
     background-color: rgb(17, 17, 17);display: flex;justify-content: center;
-    padding:30px;height: 100px;line-height:50px;
+    padding:30px;
 }
-.sec-4 p:hover{border-bottom:0.2px solid goldenrod;transition: all 0.5ms;}
+.sec-4 p{position:relative;}
+.sec-4 p::after{
+    content: '';display: block;width: 0;height: 2px;
+    position: absolute;right: 0;bottom: -10px;background-color: goldenrod;transition: all .3s;
+}
+.sec-4 p:hover::after{
+    width: 100%;
+}
 .sec-1 a:hover,.sec-4 a:hover{color:goldenrod ;}
 .sec-2 a:hover{
     opacity: 0.7;
