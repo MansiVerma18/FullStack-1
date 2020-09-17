@@ -1,0 +1,162 @@
+*{
+    padding:0;margin:0;box-sizing: border-box;font-size: 15px;
+    font-family: 'Balsamiq Sans', cursive;
+}
+section{
+    float: left;margin:20px auto;align-items: center;
+}
+.container{
+    height:460px;width:380px;box-shadow:3px 3px 3px 3px  rgb(224, 224, 224);
+    border-radius: 2px;margin-left: 55px;
+}
+.login .header{
+    height:150px;width: 100%;background-image:linear-gradient(180deg,#d35400,#f1c40f);
+    background-repeat: no-repeat;background-size: cover;color: whitesmoke;
+    border-top-left-radius: 2px;border-top-right-radius: 2px;text-align: center;
+}
+.login .header h2{
+    padding-top:20px;padding-bottom: 20px;font-size: 30px;
+}
+.login .header li{
+    list-style-type: none;display: inline-block;padding: 20px;
+}
+.login .header a{
+    font-size: 25px;color: whitesmoke;
+}
+.input input{
+    height:25px;width:80%;margin-top:20px;margin-bottom:20px;padding:10px;
+    border: none;border-bottom:1px solid gray;font-size:15px;
+}
+form{
+    margin:30px ;width: 100%;
+}
+.login .forgot{
+    text-align: right;width: 80%;
+}
+.login .forgot span{
+    
+    font-size:12px;color: darkgray;
+}
+.login input[type=submit]{
+    text-transform: uppercase;
+    border-radius: 30px;color: whitesmoke;background-image:linear-gradient(-90deg,#d35400,#f1c40f);
+    width:110px;height:45px;border:none;float: left;margin-top:25px;box-shadow: 1px 1px 1px 1px  rgba(92, 88, 88, 0.719);
+}
+.login .submit p{
+    line-height: 100px;font-size: 12px;color: darkgray;text-align: right;width: 80%;
+}
+.forgot a, .submit a{
+    color: black;text-decoration: none;font-size: 12px;
+}
+.signup h1{
+    text-align: center;color:#B53471;margin:10px;font-size:30px; 
+}
+.signup input[type=submit]{
+    border: none;background-image: linear-gradient(180deg, #d10065, #B53471);;text-transform: uppercase;
+    color:whitesmoke;border-radius: 30px;width: 110px;height: 45px;margin-top:25px;box-shadow: 1px 1px 1px 1px #9e2f63;
+    float: left;
+}
+.signup .submit p{
+    line-height:70px;font-size: 12px;color: darkgray;text-align: right;width: 80%;
+}
+.signup .forgot a,.signup .submit a{
+    color: #546de5;text-decoration: none;
+}
+.signup .header{
+    height:124px;width: 100%;background-image: linear-gradient(180deg, #d10065, #B53471);
+    background-repeat: no-repeat;background-size: cover;color: whitesmoke;
+    border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;text-align: center;
+}
+.signup h1{
+    padding-top:10px
+}
+.signup .header li{
+    list-style-type: none;display: inline-block;padding: 20px;line-height: 70px;
+}
+.signup .header a{
+    font-size: 25px;color: whitesmoke;
+}
+.signup .forgot input{
+    margin-right: 10px;float: left;
+}
+.signup .forgot p{
+    margin-right: 10px;font-size: 12px;color: darkgray;
+}
+.signin h1{
+    padding-top:10px;text-align: center;color:black;margin:10px;font-size:30px; 
+}
+.signin .forgot {
+    text-decoration: none;text-align: right;width: 80%;
+}
+.signin .forgot a{
+    color:#55ACEE;font-size: 13px;
+}
+.signin input[type=submit]{
+    width:80%;height:40px;border-radius: 30px;margin-top:20px;background-image: linear-gradient(-90deg,#09126d, rgb(58, 127, 155));
+    color: whitesmoke;text-transform: uppercase;border:none;
+}
+.signin .header{
+    height:125px;width: 100%;
+    background-repeat: no-repeat;background-size: cover;color: whitesmoke;
+    border-bottom-left-radius: 2px;border-bottom-right-radius: 2px;text-align: center;
+}
+.signin .submit p{
+    margin-left:105px;margin-top:25px
+}
+.signin .header li{
+    list-style-type: none;display: inline-block;padding: 20px;
+}
+.signin .header a{
+    color: #55ACEE;box-shadow: 2px 2px 2px 2px rgb(202, 201, 201);padding:10px 30px;
+    border-radius: 30px;font-size: 20px;
+}
+*{
+    outline: none;
+}
+input[type=text]{
+    height: 25px;outline: none;
+}
+input[type=password]{
+    height: 25px;outline: none;
+}
+.signin input:focus{
+    border-bottom:2px solid  #55ACEE
+}
+.signin input:focus+label{
+    color:  #55ACEE
+}
+
+.login input:focus{
+    border-bottom:2px solid  #d35400
+}
+.login input:focus+label{
+    color: #d35400;
+}
+.signup input:focus{
+    border-bottom:2px solid  #B53471
+}
+.signup input:focus+label{
+    color:  #B53471
+}
+.input{
+    width:100%;position: relative;height: 55px;
+}
+.input input{display: block;
+    border:none;border-bottom: 1px solid gray;
+}
+.input label{
+    position: absolute;top:0;color: gray;padding-left:10px;
+    transform: translateY(0px);
+}
+.input input:focus+label{
+    transform: translateY(-15px);transition:all 300ms ease-in-out
+}
+.heading p{
+    text-align: center;font-size: 60px;text-transform: uppercase;text-shadow: 2px 2px 2px black;margin-top: 25px;
+    font-weight: bold;font-family:Arial, Helvetica, sans-serif;
+}
+@media(max-width:400px){
+    .heading p{
+        text-align: center;font-size: 30px;
+    }
+}
