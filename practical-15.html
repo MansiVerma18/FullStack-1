@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practical-15.css">
+    <title>Practical-15</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <button id="decrease " onclick="decrease()">-</button>
+        <button id="increase " onclick="increase()">+</button>
+        <p id="counter">0</p>
+
+    </div>
+</body>
+<script>
+    var counter = 0;
+
+    function decrease() {
+        counter -= 1;
+        document.getElementById("counter").innerHTML = counter;
+    }
+
+    function increase() {
+        counter += 1;
+        document.getElementById("counter").innerHTML = counter;
+    }
+</script>
+
+</html>
