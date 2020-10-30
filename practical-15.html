@@ -11,8 +11,8 @@
 <body>
     <div class="container">
         <h1>Counter</h1>
-        <button id="decrease " onclick="decrease()">-</button>
-        <button id="increase " onclick="increase()">+</button>
+        <button id="decrease" onclick="decrease()" min=0>-</button>
+        <button id="increase" onclick="increase()">+</button>
         <p id="counter">0</p>
 
     </div>
@@ -20,12 +20,26 @@
 <script>
     var counter = 0;
 
+    document.getElementById("decrease").disabled = true;
+
     function decrease() {
+        if (counter > 1)
+            document.getElementById("decrease").disabled = false;
+        else {
+            document.getElementById("decrease").disabled = true;
+        }
         counter -= 1;
+
+
         document.getElementById("counter").innerHTML = counter;
     }
 
     function increase() {
+        if (counter > 1)
+            document.getElementById("decrease").disabled = false;
+        else {
+            document.getElementById("decrease").disabled = true;
+        }
         counter += 1;
         document.getElementById("counter").innerHTML = counter;
     }
