@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    outline: none;
+    list-style: none;
+    border: none;
+    margin: 0;
+}
+
+body {
+    background-image: linear-gradient(45deg, #dfca65, #f6e58d, #f6e58d, #e4d27b, #f0d862);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Handlee', cursive;
+    margin-bottom: 100vh;
+}
+
+h1 {
+    color: rgb(51, 51, 51);
+    margin-top: 45px;
+    font-size: 70px;
+    text-shadow: -5px 2px 1px rgb(97, 97, 97);
+    font-family: 'Satisfy';
+    text-align: center;
+}
+
+h1 i {
+    padding-left: 55px;
+    text-align: center;
+}
+
+input[type=text]:focus {
+    box-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #0ff;
+}
+
+ul li:nth-child(even) {
+    background: #dbb86d;
+}
+
+ul li:nth-child(odd) {
+    background: #b39659;
+}
+
+div {
+    width: 400px;
+    margin: 25px auto;
+    position: relative;
+}
+
+.fa-check,
+.fa-trash {
+    pointer-events: none;
+}
+
+input {
+    font-family: 'Handlee', cursive;
+    border-radius: 30px;
+    padding: 8px 0px 8px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 30px;
+}
+
+li {
+    background-color: sandybrown;
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 20px;
+    height: 30px;
+    margin: 10px 10px 10px 25px;
+    border-radius: 35px;
+}
+
+li:hover {
+    opacity: 0.5;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+#add-button {
+    position: absolute;
+    background-color: #f9ca24;
+    width: 50px;
+    line-height: 30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    top: 0;
+    font-size: 55px;
+    font-weight: bold;
+    color: whitesmoke;
+    right: -33px;
+    height: 46px;
+}
+
+li button {
+    position: absolute;
+    right: 10px;
+    font-size: 22px;
+    padding: 5px;
+    color: whitesmoke;
+    margin-top: -10px;
+}
+
+.delete-btn {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 12px 15px 12px 12px;
+    background-color: rgb(207, 90, 36);
+}
+
+.check-btn {
+    right: 53px;
+    padding: 12px 11px 12px 10px;
+    background-color: seagreen;
+}
+
+@media(max-width:500px) {
+    html {
+        height: 100vh;
+        width: 100vh;
+    }
+}
