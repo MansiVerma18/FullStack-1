@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.3s
+}
+
+body {
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 0.2rem auto;
+    background-color: whitesmoke;
+    width: 20rem;
+    height: 31rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem grey;
+}
+
+.heading {
+    text-align: center;
+    background-color: #d35400;
+    padding: 1.4rem;
+    margin-bottom: 0.2rem;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 1.4rem;
+    color: #e67e22
+}
+
+.input {
+    padding: 0.2rem 2rem;
+    width: 100%
+}
+
+.input input {
+    width: 100%;
+    border: 1px dotted #ccc;
+    outline: none;
+    margin: 0.3rem 0rem;
+    padding: 0.5rem
+}
+
+button {
+    margin: 0.5rem 2rem;
+    width: 78%;
+    padding: 0.5rem;
+    background-color: #2980b9;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #003b63;
+    outline: none;
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: 0 1.2vh #134e75;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+button:active {
+    transform: translateY(0.8vh);
+    box-shadow: 0 0.5vh #145681
+}
+
+button:hover {
+    transform: scale(1.1)
+}
+
+.noerror {
+    outline: red
+}
+
+.box .input i {
+    position: absolute;
+    visibility: hidden;
+    left: 790px;
+    margin-top: -30px
+}
+
+.fa-times-circle {
+    color: tomato;
+}
+
+.fa-check-circle {
+    color: greenyellow
+}
+
+.input.noerror .fa-check-circle {
+    visibility: visible;
+}
+
+.input small {
+    position: relative;
+    top: -0.2rem;
+    visibility: hidden;
+}
+
+.input.noerror input {
+    border-color: rgb(112, 255, 131);
+}
+
+.input.noerror .fa-check-circle {
+    visibility: visible;
+}
+
+.input.error input {
+    border-color: red;
+}
+
+.input.error .fa-times-circle {
+    visibility: visible;
+    color: red;
+}
+
+.input.error small {
+    visibility: visible;
+    color: red;
+}
+
+small {
+    font-size: 0.5rem
+}
+
+.input label {
+    font-size: 0.8rem
+}
