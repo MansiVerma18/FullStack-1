@@ -43,7 +43,7 @@ form input {
     margin: 5px 0px;
     border: none;
     outline: none;
-    border-bottom: 1px solid rgb(80, 80, 80);
+    border-bottom: 1px solid #0c5800
 }
 
 .btn-box {
@@ -55,7 +55,7 @@ form button {
     width: 100px;
     height: 35px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     color: white;
     background-color: #44bd32;
     outline: none;
